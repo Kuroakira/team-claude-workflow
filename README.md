@@ -17,25 +17,12 @@ Inspired by [obra/superpowers](https://github.com/obra/superpowers).
 
 ### Via Plugin Marketplace (Recommended)
 
-```bash
-# 1. Register the marketplace
-/plugin marketplace add Kuroakira/team-claude-workflow
+1. Open **Manage Plugins** (Claude Code settings)
+2. Go to the **Marketplaces** tab
+3. Enter `Kuroakira/team-claude-workflow` and click **Add**
+4. Switch to the **Plugins** tab and install `team-claude-workflow`
 
-# 2. Install the plugin
-/plugin install team-claude-workflow@team-claude-workflow
-```
-
-### Update
-
-```bash
-/plugin update team-claude-workflow
-```
-
-### Uninstall
-
-```bash
-/plugin uninstall team-claude-workflow
-```
+To update or uninstall, use the same **Plugins** tab.
 
 ### Manual Installation (Alternative)
 
