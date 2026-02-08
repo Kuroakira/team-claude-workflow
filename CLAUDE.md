@@ -11,8 +11,9 @@ AI-assisted developmentは速い。しかし速さだけでは、エンジニア
 ## Why This Exists
 
 1. **Understand, Not Just Build** - Every phase forces you to articulate "why": why this design, why this approach, why not alternatives
-2. **Compound Growth** - Knowledge from each project accumulates as learnings, making the next project's decisions sharper
-3. **Self-Evolving Rules** - Quality standards grow from real experience, not abstract best practices
+2. **You Own It** - AI implements and ensures quality. But the Design Doc, the code, the decisions — they're yours. You should be able to explain every choice to your team without saying "AI said so"
+3. **Compound Growth** - Knowledge from each project accumulates as learnings, making the next project's decisions sharper
+4. **Self-Evolving Rules** - Quality standards grow from real experience, not abstract best practices
 
 ## File Structure
 

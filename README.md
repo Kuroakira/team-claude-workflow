@@ -12,6 +12,8 @@ AI-assisted coding is fast. But speed alone leaves nothing behind. You get worki
 
 Use AI as a **mirror** — a tool that reflects your decisions back to you, forcing you to articulate "why" at every step. Each project compounds into the next through deliberate knowledge accumulation.
 
+**The accountability stays with you.** AI implements and ensures quality. But the Design Doc, the code, the decisions — they're yours to explain. "AI said so" is not an answer. This framework prepares you so you never need to say it.
+
 ## How It Works
 
 | Phase | What You Do | What You Gain |

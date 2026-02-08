@@ -10,8 +10,9 @@ AI as a mirror — articulate "why" at every step, accumulate knowledge across p
 ## Core Philosophy
 
 1. **Understand, not just build** - Every phase forces you to articulate WHY: why this design, why this approach, why not alternatives
-2. **Compound growth** - Knowledge from each project accumulates as learnings, making the next project's decisions sharper
-3. **Self-evolving rules** - Quality standards grow from real experience, captured as explicit rules
+2. **You own it** - AI implements and ensures quality. But the deliverables are yours to explain. "AI said so" is not an answer
+3. **Compound growth** - Knowledge from each project accumulates as learnings, making the next project's decisions sharper
+4. **Self-evolving rules** - Quality standards grow from real experience, captured as explicit rules
 
 ## Skills
 
