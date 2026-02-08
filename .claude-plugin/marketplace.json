@@ -1,15 +1,15 @@
 {
-  "name": "team-claude-workflow",
+  "name": "claude-praxis",
   "owner": {
     "name": "Kuroakira"
   },
   "metadata": {
-    "description": "Team development workflow with self-evolving quality rules"
+    "description": "Bring understanding back to vibe coding — AI builds, but the engineer grows"
   },
   "plugins": [
     {
-      "name": "team-claude-workflow",
-      "description": "Team development workflow for Claude Code with self-evolving quality rules, structured phases, and subagent-driven development",
+      "name": "claude-praxis",
+      "description": "Bring understanding back to vibe coding — a development framework where AI builds, but the engineer grows through deliberate phases and self-evolving quality rules",
       "version": "0.1.0",
       "source": "./"
     }

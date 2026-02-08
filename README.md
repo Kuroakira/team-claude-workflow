@@ -41,21 +41,21 @@ Use AI as a **mirror** — a tool that reflects your decisions back to you, forc
 
 1. Open **Manage Plugins** (Claude Code settings)
 2. Go to the **Marketplaces** tab
-3. Enter `Kuroakira/team-claude-workflow` and click **Add**
-4. Switch to the **Plugins** tab and install `team-claude-workflow`
+3. Enter `Kuroakira/claude-praxis` and click **Add**
+4. Switch to the **Plugins** tab and install `claude-praxis`
 
 To update or uninstall, use the same **Plugins** tab.
 
 ### Manual Installation (Alternative)
 
 ```bash
-git clone https://github.com/Kuroakira/team-claude-workflow.git
-cd team-claude-workflow
+git clone https://github.com/Kuroakira/claude-praxis.git
+cd claude-praxis
 mkdir -p ~/.claude/skills
-ln -s $(pwd) ~/.claude/skills/team-claude-workflow
+ln -s $(pwd) ~/.claude/skills/claude-praxis
 
 # To uninstall:
-rm ~/.claude/skills/team-claude-workflow
+rm ~/.claude/skills/claude-praxis
 ```
 
 ## Skills

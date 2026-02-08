@@ -1,4 +1,4 @@
-# Team Claude Workflow - Project Overview
+# Claude Praxis - Project Overview
 
 ## Core Concept
 
@@ -18,7 +18,7 @@ AI-assisted developmentは速い。しかし速さだけでは、エンジニア
 ## File Structure
 
 ```
-team-claude-workflow/
+claude-praxis/
 ├── hooks/
 │   ├── hooks.json               # SessionStart + PreCompact hook config
 │   ├── session-start.sh         # Injects getting-started skill + notifies persistence files

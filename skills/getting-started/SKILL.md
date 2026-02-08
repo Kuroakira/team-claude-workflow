@@ -3,7 +3,7 @@ name: getting-started
 description: Use when starting a new session, resuming after compact/clear, or beginning a new implementation task.
 ---
 
-# Team Claude Workflow
+# Claude Praxis
 
 AI as a mirror — articulate "why" at every step, accumulate knowledge across projects.
 

@@ -1,12 +1,12 @@
 {
-  "name": "team-claude-workflow",
-  "description": "Team development workflow for Claude Code with self-evolving quality rules, structured phases, and subagent-driven development",
+  "name": "claude-praxis",
+  "description": "Bring understanding back to vibe coding — a development framework where AI builds, but the engineer grows through deliberate phases and self-evolving quality rules",
   "version": "0.1.0",
   "author": {
     "name": "Kuroakira"
   },
-  "homepage": "https://github.com/Kuroakira/team-claude-workflow",
-  "repository": "https://github.com/Kuroakira/team-claude-workflow",
+  "homepage": "https://github.com/Kuroakira/claude-praxis",
+  "repository": "https://github.com/Kuroakira/claude-praxis",
   "license": "MIT",
   "keywords": [
     "skills",
