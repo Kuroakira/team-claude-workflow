@@ -62,6 +62,7 @@ rm ~/.claude/skills/team-claude-workflow
 | `/plan` | Break Design Doc into small executable tasks |
 | `/implement` | Execute the plan with TDD and verification |
 | `/review` | Request code review for completed work |
+| `/compound` | Promote valuable knowledge from progress to learnings |
 
 ## Core Workflow
 

@@ -22,7 +22,8 @@ team-claude-workflow/
 │   ├── design.md                # /design — create Design Doc
 │   ├── plan.md                  # /plan — create implementation plan
 │   ├── implement.md             # /implement — execute the plan
-│   └── review.md                # /review — request code review
+│   ├── review.md                # /review — request code review
+│   └── compound.md              # /compound — promote Flow knowledge to Stock
 ├── skills/
 │   ├── getting-started/         # Bootstrap: workflow overview + session start
 │   ├── code-quality-rules/      # Quality rules + self-evolution protocol
