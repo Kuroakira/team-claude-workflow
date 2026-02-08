@@ -5,14 +5,13 @@ description: Use when starting a new session, resuming after compact/clear, or b
 
 # Team Claude Workflow
 
-Team development workflow for Claude Code.
-**Self-evolving quality rules** are the key differentiator.
+AI as a mirror — articulate "why" at every step, accumulate knowledge across projects.
 
 ## Core Philosophy
 
-1. **Turn tacit knowledge into explicit rules** - If something was flagged as bad, capture it as a rule
-2. **Rules evolve** - Discover issues, propose additions, add upon approval
-3. **Team review is the default** - Never work in isolation; collaborate through documentation
+1. **Understand, not just build** - Every phase forces you to articulate WHY: why this design, why this approach, why not alternatives
+2. **Compound growth** - Knowledge from each project accumulates as learnings, making the next project's decisions sharper
+3. **Self-evolving rules** - Quality standards grow from real experience, captured as explicit rules
 
 ## Skills
 
@@ -23,35 +22,39 @@ Team development workflow for Claude Code.
 | `context-persistence` | When preserving state across compact/clear. Write auto, read manual. |
 | `design-doc-format` | When creating Design Docs. Notion-compatible format. |
 | `incremental-review` | During implementation. Show small changes with reasoning. |
-| `context-recovery` | After compact/clear. State restoration. |
 
 ## Core Workflow
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│ 1. Research Phase                                   │
-│    - Investigate best practices / similar OSS       │
-│    - Deepen understanding by asking questions       │
+│ 1. Research Phase (/research)                       │
+│    - Understand the problem space and prior art     │
+│    - Ask "why" before deciding "what"               │
 └─────────────────────────────────────────────────────┘
                         ↓
 ┌─────────────────────────────────────────────────────┐
-│ 2. Design Phase                                     │
-│    - Consider ideal architecture based on current   │
-│    - Create Design Doc (Notion-compatible format)   │
-│    - Submit for team review                         │
+│ 2. Design Phase (/design)                           │
+│    - Articulate your design rationale               │
+│    - Document alternatives and WHY you chose this   │
+│    - Submit for review                              │
 └─────────────────────────────────────────────────────┘
                         ↓
 ┌─────────────────────────────────────────────────────┐
-│ 3. Planning Phase                                   │
-│    - Break Design Doc into small PRs                │
-│    - Create implementation plan per Phase/Step      │
+│ 3. Planning Phase (/plan)                           │
+│    - Break into steps you can explain               │
+│    - Each step has a clear purpose                  │
 └─────────────────────────────────────────────────────┘
                         ↓
 ┌─────────────────────────────────────────────────────┐
-│ 4. Implementation Phase                             │
-│    - Implement per Phase                            │
-│    - Get approval before proceeding                 │
-│    - Issue found → propose rule → update Doc → redo │
+│ 4. Implementation Phase (/implement)                │
+│    - Build with TDD and quality rules               │
+│    - Issue found → understand why → update rules    │
+└─────────────────────────────────────────────────────┘
+                        ↓
+┌─────────────────────────────────────────────────────┐
+│ 5. Compound Phase (/compound)                       │
+│    - Extract what you learned                       │
+│    - Carry it forward to the next project           │
 └─────────────────────────────────────────────────────┘
 ```
 

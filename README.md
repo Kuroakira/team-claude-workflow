@@ -1,17 +1,35 @@
 # Team Claude Workflow
 
-Team development workflow for Claude Code. Self-evolving quality rules, team review flows, and structured development phases.
+**Vibe codingに「理解」を取り戻す。** AIが書いても、エンジニアが育つ開発フレームワーク。
 
 Inspired by [obra/superpowers](https://github.com/obra/superpowers).
 
-## Features
+## The Problem
 
-- **Self-Evolving Quality Rules** - Discover issues during implementation, propose rule additions. Once approved, rules are added to skills and automatically enforced.
-- **Team Development First** - Team review via Design Docs, Notion-compatible formatting
-- **Context Persistence** - Stock/Flow memory model survives compact/clear (write auto, read manual)
-- **Subagent-Driven Development** - Fresh agent per task with two-stage review (spec + quality)
-- **Agent Team Execution** - Parallel exploration for research, review, and debugging using Opus 4.6 agent teams
-- **Verification Before Completion** - No success claims without fresh evidence
+AI-assisted coding is fast. But speed alone leaves nothing behind. You get working software, yet your engineering judgment doesn't grow. Before AI, writing every line forced understanding. With vibe coding, that process disappears.
+
+## The Solution
+
+Use AI as a **mirror** — a tool that reflects your decisions back to you, forcing you to articulate "why" at every step. Each project compounds into the next through deliberate knowledge accumulation.
+
+## How It Works
+
+| Phase | What You Do | What You Gain |
+|-------|------------|---------------|
+| `/research` | Investigate the problem space | Understanding of prior art and trade-offs |
+| `/design` | Write a Design Doc with rationale | Clarity on WHY this approach, not just WHAT |
+| `/plan` | Break design into deliberate steps | Ability to explain each decision |
+| `/implement` | Build with quality rules and TDD | Awareness of patterns and pitfalls |
+| `/review` | Get feedback from other perspectives | Discovery of your blind spots |
+| `/compound` | Extract and classify learnings | Knowledge that carries to the next project |
+
+## Key Mechanisms
+
+- **Self-Evolving Quality Rules** - Discover issues during implementation, propose rule additions. Rules grow from YOUR experience, not abstract best practices.
+- **Compound Learning** - `/compound` promotes valuable knowledge from work logs to permanent learnings, routed to project-specific or cross-project storage.
+- **Context Persistence** - Stock/Flow memory model survives compact/clear. Flow (progress) is pruned; Stock (learnings) persists forever.
+- **Structured Understanding** - Design Docs force you to articulate alternatives and WHY you chose this path. That reasoning becomes reusable.
+- **Verification Before Completion** - No claims without fresh evidence. Proves understanding, not just output.
 
 ## Installation
 
@@ -55,22 +73,14 @@ rm ~/.claude/skills/team-claude-workflow
 
 ## Commands
 
-| Command | Phase |
-|---------|-------|
-| `/research` | Investigate best practices and similar implementations |
-| `/design` | Create a Design Doc for team review |
-| `/plan` | Break Design Doc into small executable tasks |
-| `/implement` | Execute the plan with TDD and verification |
-| `/review` | Request code review for completed work |
-| `/compound` | Promote valuable knowledge from progress to learnings |
-
-## Core Workflow
-
-```
-/research → /design → Team Review → /plan → /implement → /review
-                                               ↑
-                                    Issue found → update Doc → redo
-```
+| Command | Purpose |
+|---------|---------|
+| `/research` | Understand the problem space before building |
+| `/design` | Articulate your design rationale as a Design Doc |
+| `/plan` | Break Design Doc into deliberate, explainable steps |
+| `/implement` | Build with TDD, quality rules, and verification |
+| `/review` | Expose blind spots through code review |
+| `/compound` | Extract learnings and carry them to the next project |
 
 ## Quality Rules (Defaults)
 

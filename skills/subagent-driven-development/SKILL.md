@@ -5,7 +5,9 @@ description: Use when executing an implementation plan with multiple independent
 
 # Subagent-Driven Development
 
-Dispatch a fresh subagent per task. Review in two stages. Never trust self-reports.
+AI ensures quality. You ensure understanding.
+
+Dispatch a fresh subagent per task, review in two stages for quality, then receive a briefing on key decisions so you understand what was built and why.
 
 ## Why Fresh Subagents?
 
@@ -26,19 +28,48 @@ Controller (you)
     │   │      - Implementer can ask questions before starting
     │   │      - Implementer does self-review before reporting
     │   │
-    │   ├── 2. Stage 1: Spec compliance review
+    │   ├── 2. Stage 1: Spec compliance review (AI)
     │   │      - Reviewer reads code independently
     │   │      - Does NOT trust implementer's report
     │   │      - Checks: does the code match the spec?
     │   │      - If issues → implementer fixes → re-review
     │   │
-    │   └── 3. Stage 2: Code quality review
-    │          - Only runs after spec compliance passes
-    │          - Checks: code quality, patterns, tests, edge cases
-    │          - If issues → implementer fixes → re-review
+    │   ├── 3. Stage 2: Code quality review (AI)
+    │   │      - Only runs after spec compliance passes
+    │   │      - Checks: code quality, patterns, tests, edge cases
+    │   │      - If issues → implementer fixes → re-review
+    │   │
+    │   └── 4. Key Decisions Briefing (→ Human)
+    │          - Summarize: what was implemented and WHY
+    │          - Highlight: key design decisions made during implementation
+    │          - Flag: anything surprising, non-obvious, or worth understanding
+    │          - Human reviews code, asks questions if needed
     │
     └── After all tasks: final integration review
 ```
+
+## Key Decisions Briefing
+
+After AI reviews pass, present the human with:
+
+```
+## Implementation Briefing: [task name]
+
+### What Was Built
+[1-2 sentence summary]
+
+### Key Decisions
+1. [Decision]: [what was chosen] — because [why]
+2. [Decision]: [what was chosen] — because [why]
+
+### Worth Noting
+- [Anything surprising, non-obvious, or worth understanding for future work]
+
+### Files Changed
+- [file list for human review]
+```
+
+The human reads the briefing, reviews the code, and asks questions if anything is unclear. This is not a gate — it's a learning opportunity.
 
 ## Controller Responsibilities
 
@@ -46,7 +77,8 @@ Controller (you)
 2. **Dispatch one agent per task** — provide complete context in the prompt
 3. **Never let subagents read the plan file** — you provide the task text
 4. **Run reviews after each task** — not at the end
-5. **Track progress** — use TodoWrite to show status
+5. **Present briefing to human** — key decisions and rationale
+6. **Track progress** — use TodoWrite to show status
 
 ## Implementer Prompt Template
 
@@ -66,7 +98,7 @@ When dispatching a task agent, include:
 1. Follow TDD (RED → GREEN → REFACTOR)
 2. Run verification before reporting (typecheck, lint, test)
 3. Do a self-review before reporting back
-4. Report: what you did, what tests you wrote, verification output
+4. Report: what you did, key decisions you made and WHY, verification output
 ```
 
 ## Spec Review Prompt Template
@@ -123,4 +155,5 @@ Code quality review for: [task description]
 - Requires `code-quality-rules` — all implementers must follow quality rules
 - Requires `verification-before-completion` — reviewers must verify independently
 - Requires `test-driven-development` from code-quality-rules — RED/GREEN/REFACTOR per task
+- Key Decisions Briefing feeds into `/compound` — learnings from implementation decisions
 - See `agent-team-execution` for parallel exploration tasks (research, review, debugging)

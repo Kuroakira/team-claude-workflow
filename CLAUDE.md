@@ -1,13 +1,18 @@
 # Team Claude Workflow - Project Overview
 
-## Purpose
+## Core Concept
 
-Systematize team development workflows for Claude Code as skills, published as a GitHub repository.
-Inspired by obra/superpowers, with these unique values:
+**Vibe codingに「理解」を取り戻す。AIが書いても、エンジニアが育つ開発フレームワーク。**
 
-1. **Self-Evolving Quality Rules** - Discover issues during implementation → propose rule addition → approve → update SKILL.md
-2. **Team Development First** - Design Docs, Notion integration, team review flows
-3. **Context Recovery** - Smooth state restoration after compact/clear via SessionStart hook
+AI-assisted developmentは速い。しかし速さだけでは、エンジニアの中に何も残らない。
+このプラグインは、AIを「鏡」として使い、設計と実装の「なぜ」を言語化・蓄積することで、
+エンジニアとしての判断力を複利的に成長させるシステムである。
+
+## Why This Exists
+
+1. **Understand, Not Just Build** - Every phase forces you to articulate "why": why this design, why this approach, why not alternatives
+2. **Compound Growth** - Knowledge from each project accumulates as learnings, making the next project's decisions sharper
+3. **Self-Evolving Rules** - Quality standards grow from real experience, not abstract best practices
 
 ## File Structure
 
@@ -18,14 +23,14 @@ team-claude-workflow/
 │   ├── session-start.sh         # Injects getting-started skill + notifies persistence files
 │   └── pre-compact.sh           # Trims Flow files before compact
 ├── commands/
-│   ├── research.md              # /research — start research phase
-│   ├── design.md                # /design — create Design Doc
-│   ├── plan.md                  # /plan — create implementation plan
-│   ├── implement.md             # /implement — execute the plan
-│   ├── review.md                # /review — request code review
-│   └── compound.md              # /compound — promote Flow knowledge to Stock
+│   ├── research.md              # /research — understand WHY before building
+│   ├── design.md                # /design — articulate your design rationale
+│   ├── plan.md                  # /plan — break design into deliberate steps
+│   ├── implement.md             # /implement — build with quality awareness
+│   ├── review.md                # /review — discover blind spots
+│   └── compound.md              # /compound — extract and accumulate learnings
 ├── skills/
-│   ├── getting-started/         # Bootstrap: workflow overview + session start
+│   ├── getting-started/         # Bootstrap: philosophy + workflow overview
 │   ├── code-quality-rules/      # Quality rules + self-evolution protocol
 │   ├── verification-before-completion/  # No claims without evidence
 │   ├── subagent-driven-development/     # Fresh agent per task + 2-stage review
@@ -43,10 +48,15 @@ team-claude-workflow/
 
 ## Core Workflow
 
+Each phase exists to deepen understanding, not just to produce output.
+
 ```
-/research → /design → Team Review → /plan → /implement → /review
-                                               ↑
-                                    Issue found → update Doc → redo
+/research  → Understand the problem space and prior art
+/design    → Articulate WHY this design, not just WHAT
+/plan      → Break into steps you can explain
+/implement → Build with quality rules, learn from issues
+/review    → Expose blind spots through other perspectives
+/compound  → Extract what you learned, carry it forward
 ```
 
 ## Quality Rules (defined in code-quality-rules)
@@ -93,3 +103,4 @@ team-claude-workflow/
 - Notion integration handled through format rules (API integration for future consideration)
 - SessionStart hook auto-injects getting-started skill (no CLAUDE.md dependency for bootstrap)
 - Skill descriptions contain ONLY trigger conditions (CSO — prevents shortcut behavior)
+- Context persistence follows "Write Auto, Read Manual" — never auto-inject content into context

@@ -5,7 +5,7 @@ description: Use when a task benefits from parallel exploration with multiple in
 
 # Agent Team Execution
 
-Coordinate multiple Claude Code sessions to explore problems from independent angles, challenge each other's findings, and converge on stronger conclusions.
+Multiple perspectives, your synthesis. Agent teams explore in parallel — you integrate the findings into your own understanding.
 
 Requires: `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS` enabled in settings.json.
 
@@ -56,6 +56,10 @@ weak claims. Then synthesize into a single recommendation with cited sources.
 - Devil's advocate is mandatory — prevents groupthink
 - Lead synthesizes after teammates challenge each other, not before
 
+### Your Role After Research
+
+Agents deliver findings. **You write the Design Doc.** Translating research into your own design rationale is where understanding happens. Don't copy-paste — articulate why YOU chose this approach based on the findings.
+
 ## 2. Adversarial Code Review
 
 Use after implementation to get thorough, multi-focus review.
@@ -91,6 +95,10 @@ perspective. Synthesize into a unified review with agreed severity ratings.
 - Reviewers must verify independently (verification-before-completion)
 - Cross-challenge is mandatory — a security issue may also be a perf issue
 - Lead produces unified report with final severity ratings
+
+### Your Role After Review
+
+Read the findings. For each issue, understand **why** it's a problem, not just that it is one. When you fix an issue, you should be able to explain the vulnerability/bottleneck to a teammate. Issues you didn't understand become `/compound` candidates.
 
 ## 3. Competing Hypothesis Debugging
 
@@ -131,6 +139,10 @@ Report: surviving hypothesis with evidence, disproven hypotheses with reasons.
 - If 3+ hypotheses are disproven and none survive, the problem needs reframing
 - Lead does NOT pick a winner prematurely — let evidence decide
 
+### Your Role After Debugging
+
+Understand the surviving hypothesis. You should be able to explain: what caused the bug, why the other hypotheses were wrong, and what to watch for in the future. This understanding feeds into `/compound` as a learning.
+
 ## Cost Awareness
 
 Agent teams use significantly more tokens than a single session. Each teammate is a full Claude instance.
@@ -146,7 +158,8 @@ Start with 3 teammates. Only go to 5 for debugging with many plausible hypothese
 
 ## Integration
 
-- Research output feeds into `/design` phase (getting-started workflow)
+- Research output feeds into `/design` phase — **you** write the Design Doc from findings
 - Review output follows `requesting-code-review` format (severity ratings)
 - Debugging output feeds into fix implementation via `subagent-driven-development`
+- All outputs feed into `/compound` — extract learnings from what agents discovered
 - **Never use for implementation** — use `subagent-driven-development` instead
