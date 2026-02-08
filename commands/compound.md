@@ -15,15 +15,17 @@ Invoke skill `context-persistence`, then execute **Flow → Stock Promotion**:
 
 From progress.md, I found the following promotable learnings:
 
-| # | Learning | Proposed Destination | Reason |
-|---|----------|---------------------|--------|
-| 1 | "..." | project learnings | Project-specific API detail |
-| 2 | "..." | global learnings | Reusable across projects |
-| 3 | "..." | code-quality-rules | Universal quality pattern |
-| 4 | "..." | discard | Not reusable knowledge |
+| # | Learning | Context / Rationale | Proposed Destination |
+|---|----------|--------------------|--------------------|
+| 1 | "JWT chosen over session-based auth" | "Stateless requirement, multiple API consumers" | project learnings |
+| 2 | "CORS middleware must come before auth" | "Auth middleware rejects preflight requests otherwise" | global learnings |
+| 3 | "Never use eval()" | "Arbitrary code execution risk" | code-quality-rules |
+| 4 | "Fixed typo in line 42" | — | discard |
 
 Adjust any routing? (or "OK" to proceed)
 ```
+
+**Important**: Every learning MUST include its context/rationale — the WHY behind the decision or discovery. This context is what makes the learning reusable: when a similar situation arises later, we can ask "does the same rationale still apply?" instead of blindly repeating the same choice.
 
 4. Wait for human confirmation or adjustments before writing
 5. For quality rule candidates, follow the Rule Evolution Protocol in `code-quality-rules`:

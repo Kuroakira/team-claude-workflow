@@ -114,6 +114,22 @@ When the user starts a conversation or gives a new task, detect the context and 
 | /review | Review feedback addressed | "Review done. Capture learnings with /compound?" |
 | /compound | Learnings promoted | Session complete or next task |
 
+## Contextual Recall of Past Learnings
+
+When learnings files exist (`learnings.md`, `global-learnings.md`), and a current task touches a similar domain or decision, do NOT silently apply the past learning. Instead, present it with its original context and ask the human to judge:
+
+**Pattern**: Present the past decision with its rationale, then ask if the same assumptions hold.
+
+> "In a previous project, we chose [X] because [rationale]. Does the same context apply here, or is this situation different?"
+
+**Rules**:
+1. Always include the **original rationale** — not just the conclusion
+2. Ask whether the **assumptions still hold**, not whether they remember it
+3. If the human says "same situation", apply the learning. If they say "different", explore the new context together
+4. Do NOT quiz the human ("Do you remember?"). The goal is judgment, not memorization
+
+**When NOT to recall**: Trivial or universal rules (e.g., "don't use eval") should be applied silently. Contextual recall is for decisions that depend on project context, trade-offs, or architectural choices.
+
 ## How to Use Skills
 
 **If a skill exists for the task, you must use it.**
