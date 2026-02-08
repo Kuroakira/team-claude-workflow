@@ -1,6 +1,8 @@
-# Team Claude Workflow
+# Claude Praxis
 
-**Vibe codingに「理解」を取り戻す。** AIが書いても、エンジニアが育つ開発フレームワーク。
+**Bring understanding back to vibe coding.** A development framework where AI builds, but the engineer grows.
+
+> **Praxis** (Greek: πρᾶξις) — learning through practice. Aristotle distinguished three forms of knowledge: *theoria* (pure knowledge), *poiesis* (making things), and *praxis* (understanding through action). Vibe coding is poiesis — you get output, but nothing stays with you. This framework brings praxis back: every phase forces you to articulate "why," and that understanding compounds across projects.
 
 Inspired by [obra/superpowers](https://github.com/obra/superpowers).
 
