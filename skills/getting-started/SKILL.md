@@ -7,75 +7,67 @@ description: Use when starting a new session, resuming after compact/clear, or b
 
 AI as a mirror — articulate "why" at every step, accumulate knowledge across projects.
 
-## Core Philosophy
+## Mandatory Skill Invocation
 
-1. **Understand, not just build** - Every phase forces you to articulate WHY: why this design, why this approach, why not alternatives
-2. **You own it** - AI implements and ensures quality. But the deliverables are yours to explain. "AI said so" is not an answer
-3. **Compound growth** - Knowledge from each project accumulates as learnings, making the next project's decisions sharper
-4. **Self-evolving rules** - Quality standards grow from real experience, captured as explicit rules
+**Skills are NOT optional. They are mandatory workflows.**
 
-## Skills
-
-| Skill | When to Use |
-|-------|-------------|
-| `code-quality-rules` | Always during implementation. Enforces and evolves quality rules. |
-| `systematic-debugging` | When investigating bugs, errors, or unexpected behavior. 4-phase root cause analysis. |
-| `context-persistence` | When preserving state across compact/clear. Write auto, read manual. |
-| `design-doc-format` | When creating Design Docs. Notion-compatible format. |
-| `incremental-review` | During implementation. Show small changes with reasoning. |
-
-## Core Workflow
+### The Iron Rule
 
 ```
-┌─────────────────────────────────────────────────────┐
-│ 1. Research Phase (/research)                       │
-│    - Understand the problem space and prior art     │
-│    - Ask "why" before deciding "what"               │
-└─────────────────────────────────────────────────────┘
-                        ↓
-┌─────────────────────────────────────────────────────┐
-│ 2. Design Phase (/design)                           │
-│    - Articulate your design rationale               │
-│    - Document alternatives and WHY you chose this   │
-│    - Submit for review                              │
-└─────────────────────────────────────────────────────┘
-                        ↓
-┌─────────────────────────────────────────────────────┐
-│ 3. Planning Phase (/plan)                           │
-│    - Break into steps you can explain               │
-│    - Each step has a clear purpose                  │
-└─────────────────────────────────────────────────────┘
-                        ↓
-┌─────────────────────────────────────────────────────┐
-│ 4. Implementation Phase (/implement)                │
-│    - Build with TDD and quality rules               │
-│    - Issue found → understand why → update rules    │
-└─────────────────────────────────────────────────────┘
-                        ↓
-┌─────────────────────────────────────────────────────┐
-│ 5. Compound Phase (/compound)                       │
-│    - Extract what you learned                       │
-│    - Carry it forward to the next project           │
-└─────────────────────────────────────────────────────┘
+If you think there is even a 1% chance a skill might apply,
+you ABSOLUTELY MUST invoke the skill.
 ```
 
-## Feedback Loop During Implementation
+### Timing
+
+Skills must be checked **BEFORE** any response, clarification, or action — even before asking clarifying questions.
 
 ```
-Issue found ──→ Discuss with human ──→ Decide direction
-    ↓                                      ↓
-    └──────────────────────────────────────┤
-                                           ↓
-                                   Update Doc first
-                                           ↓
-                                   Re-implement
-                                           ↓
-                                   Propose rule addition?
-                                       ↓      ↓
-                                      Yes     No
-                                       ↓      ↓
-                                 Update SKILL.md  Move on
+User gives task
+    ↓
+Check available skills (FIRST)
+    ↓
+Invoke matching skill(s)
+    ↓
+THEN respond/act
 ```
+
+### Red Flags — You Are Rationalizing
+
+If you catch yourself thinking any of these, STOP and invoke the skill:
+
+| Rationalization | Reality |
+|-----------------|---------|
+| "This is just a simple question" | Simple questions often hide complexity. Invoke the skill. |
+| "I need more context first" | The skill will help you gather context properly. Invoke the skill. |
+| "The skill is overkill for this" | Skills prevent improvisation. Invoke the skill. |
+| "I already know how to do this" | Your knowledge may be incomplete. Invoke the skill. |
+| "It will slow us down" | Skipping skills causes rework. Invoke the skill. |
+
+### Available Skills
+
+| Trigger | Skill | Description |
+|---------|-------|-------------|
+| Bug, error, "why doesn't this work", reviewing/analyzing bug investigations | `systematic-debugging` | 4-phase root cause analysis |
+| Implementation task | `code-quality-rules` | TDD, quality enforcement |
+| Multi-step task, parallel exploration | `subagent-driven-development` | Fresh agent per task |
+| Research, analysis, multiple perspectives | `agent-team-execution` | Parallel hypothesis testing |
+| Task completion, claiming "done" | `verification-before-completion` | Evidence before claims |
+| Long task, context preservation | `context-persistence` | State survival across compact |
+| Code review needed | `requesting-code-review` | Dispatch reviewer |
+| Received feedback | `receiving-code-review` | Handle feedback properly |
+
+### Skill Priority
+
+When multiple skills apply:
+
+1. **Process skills first**: systematic-debugging, agent-team-execution
+2. **Then implementation skills**: code-quality-rules, subagent-driven-development
+3. **Then verification**: verification-before-completion
+
+### Non-Negotiable
+
+Treating skills as "optional guidance" is fundamentally wrong. They are structured workflows that prevent inefficient improvisation. **Invoke them.**
 
 ## Phase Detection & Suggestion
 
@@ -130,67 +122,12 @@ When learnings files exist (`learnings.md`, `global-learnings.md`), and a curren
 
 **When NOT to recall**: Trivial or universal rules (e.g., "don't use eval") should be applied silently. Contextual recall is for decisions that depend on project context, trade-offs, or architectural choices.
 
-## Mandatory Skill Invocation
+## Core Philosophy
 
-**Skills are NOT optional. They are mandatory workflows.**
-
-### The Iron Rule
-
-```
-If you think there is even a 1% chance a skill might apply,
-you ABSOLUTELY MUST invoke the skill.
-```
-
-### Timing
-
-Skills must be checked **BEFORE** any response, clarification, or action — even before asking clarifying questions.
-
-```
-User gives task
-    ↓
-Check available skills (FIRST)
-    ↓
-Invoke matching skill(s)
-    ↓
-THEN respond/act
-```
-
-### Red Flags — You Are Rationalizing
-
-If you catch yourself thinking any of these, STOP and invoke the skill:
-
-| Rationalization | Reality |
-|-----------------|---------|
-| "This is just a simple question" | Simple questions often hide complexity. Invoke the skill. |
-| "I need more context first" | The skill will help you gather context properly. Invoke the skill. |
-| "The skill is overkill for this" | Skills prevent improvisation. Invoke the skill. |
-| "I already know how to do this" | Your knowledge may be incomplete. Invoke the skill. |
-| "It will slow us down" | Skipping skills causes rework. Invoke the skill. |
-
-### Skill Priority
-
-When multiple skills apply:
-
-1. **Process skills first**: systematic-debugging, agent-team-execution
-2. **Then implementation skills**: code-quality-rules, subagent-driven-development
-3. **Then verification**: verification-before-completion
-
-### Available Skills
-
-| Trigger | Skill | Description |
-|---------|-------|-------------|
-| Bug, error, "why doesn't this work" | `systematic-debugging` | 4-phase root cause analysis |
-| Implementation task | `code-quality-rules` | TDD, quality enforcement |
-| Multi-step task, parallel exploration | `subagent-driven-development` | Fresh agent per task |
-| Research, analysis, multiple perspectives | `agent-team-execution` | Parallel hypothesis testing |
-| Task completion, claiming "done" | `verification-before-completion` | Evidence before claims |
-| Long task, context preservation | `context-persistence` | State survival across compact |
-| Code review needed | `requesting-code-review` | Dispatch reviewer |
-| Received feedback | `receiving-code-review` | Handle feedback properly |
-
-### Non-Negotiable
-
-Treating skills as "optional guidance" is fundamentally wrong. They are structured workflows that prevent inefficient improvisation. **Invoke them.**
+1. **Understand, not just build** - Every phase forces you to articulate WHY
+2. **You own it** - The deliverables are yours to explain. "AI said so" is not an answer
+3. **Compound growth** - Knowledge accumulates as learnings across projects
+4. **Self-evolving rules** - Quality standards grow from real experience
 
 ## Session Start Checklist
 
