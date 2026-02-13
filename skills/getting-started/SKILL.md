@@ -122,12 +122,44 @@ When learnings files exist (`learnings.md`, `global-learnings.md`), and a curren
 
 **When NOT to recall**: Trivial or universal rules (e.g., "don't use eval") should be applied silently. Contextual recall is for decisions that depend on project context, trade-offs, or architectural choices.
 
+## In-Flight Process Improvement
+
+During any phase, if you notice a better way to work (research, design, implement, debug), **propose the improvement immediately** — don't wait for /compound.
+
+> "I noticed that [current approach] could be improved by [suggestion]. Want me to update [skill/command] to reflect this?"
+
+This applies to:
+- A better way to structure research
+- A missing consideration in Design Doc format
+- A more effective debugging pattern
+- An implementation practice that should be standard
+
+### Feedback-Driven Improvement
+
+When the human corrects, adds to, or adjusts your output, treat it as a potential skill improvement signal:
+
+```
+You produce output (research, design doc, implementation, etc.)
+    ↓
+Human gives feedback ("add more Why", "compare alternatives", "check security")
+    ↓
+You fix the current work
+    ↓
+Ask: "This seems like it should always apply. Want me to update [skill/command]?"
+    ↓
+Human approves → edit the skill/command directly
+```
+
+**Every repeated correction is a missing rule.** If the human has to say the same thing twice, the framework should have caught it the first time.
+
+The human approves → edit the skill/command directly. This is how the framework evolves in real-time from real experience.
+
 ## Core Philosophy
 
 1. **Understand, not just build** - Every phase forces you to articulate WHY
 2. **You own it** - The deliverables are yours to explain. "AI said so" is not an answer
 3. **Compound growth** - Knowledge accumulates as learnings across projects
-4. **Self-evolving rules** - Quality standards grow from real experience
+4. **Self-evolving framework** - Not just quality rules, but research methods, design practices, and workflows grow from real experience
 
 ## Session Start Checklist
 
