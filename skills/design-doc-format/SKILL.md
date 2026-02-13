@@ -113,14 +113,12 @@ A reader unfamiliar with the project should understand the problem after reading
 - Prevents scope creep and sets clear boundaries for reviewers
 
 ## Proposal
-The chosen design and WHY this approach was selected over alternatives.
-This is the main section — describe the design at the boundary/interface level with clear reasoning.
+**This is the main section.** The single best approach chosen from research, described at the boundary/interface level.
 
-### Key Design Decisions
-For each significant decision in the design, explain:
-- What was decided and why
-- What constraints or requirements drove this choice
-- What trade-offs were accepted
+Explain:
+- What the design is
+- Why this approach is the best fit given the constraints
+- Key design decisions with reasoning and accepted trade-offs
 
 ### System-Context Diagram (optional)
 Show where this design fits within the existing system.
@@ -128,8 +126,8 @@ Use mermaid diagrams to illustrate how new components relate to what already exi
 Focus on boundaries and interactions, not internal implementation.
 
 ## Alternatives Considered
-**This section is mandatory.** Document the approaches that were NOT chosen and why.
-The main design lives in Proposal. This section explains why other options were rejected.
+**This section is mandatory.** List the other approaches that were researched but NOT chosen.
+For each alternative, explain **why Proposal is better than this option** in the current context.
 
 For each alternative:
 
@@ -140,8 +138,8 @@ Brief description of the approach.
 | Aspect | Detail |
 |--------|--------|
 | How it works | ... |
-| Why it was rejected | ... |
-| When to reconsider | ... |
+| Why Proposal is preferred over this | ... |
+| When to reconsider this alternative | ... |
 
 ## Cross-Cutting Concerns
 Explicitly address how this design handles:
