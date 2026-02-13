@@ -7,6 +7,36 @@ description: Use when creating a Design Doc, technical document, or any document
 
 Write documents that work in Notion and are ready for team review.
 
+## Why Over How
+
+A Design Doc is a **decision record**, not an implementation guide.
+
+### The Core Principle
+
+**Write WHY generously. Write HOW sparingly.**
+
+- **WHY this design**: What problem it solves, what constraints shaped it, why alternatives were rejected — this stays valid even when the implementation changes
+- **HOW it's implemented**: Code examples, directory structures, API details — these become lies the moment someone refactors
+
+### What the Doc Must Answer
+
+When a newcomer joins the team and reads the doc, they should NOT need to ask:
+- "Why did we choose this approach over X?"
+- "Was Y considered? Why not?"
+- "What assumptions is this design based on?"
+- "Under what conditions would we reconsider this?"
+
+If they still have these questions after reading, the doc is incomplete.
+
+### What the Doc Should NOT Contain
+
+- Detailed code examples (the code itself is the source of truth)
+- Directory structures (these change with refactoring)
+- Step-by-step implementation guides (this belongs in the implementation plan, not the design)
+- API response schemas (these belong in API documentation, not the design rationale)
+
+**Exception**: When a specific implementation detail IS the design decision (e.g., "we use CQRS pattern because..."), include just enough code to illustrate the concept, marked as **Conceptual**.
+
 ## Absolute Rules
 
 ### No Local File Links
@@ -79,16 +109,18 @@ One paragraph: what this is and why it matters.
 The problem in detail. Current state, pain points, and what triggered this proposal.
 
 ## Proposal
-What we're proposing. High-level approach and rationale.
+What we're proposing and WHY this approach was chosen.
+Focus on the reasoning and constraints that led to this design, not the implementation details.
 
-### Architecture
-Mermaid diagrams for system design.
+### Key Design Decisions
+For each significant decision in the design, explain:
+- What was decided and why
+- What constraints or requirements drove this choice
+- What trade-offs were accepted
 
-### API / Interface Changes
-New or changed interfaces with code snippets.
-
-### Data Model Changes
-Schema changes if applicable.
+### High-Level Architecture (optional)
+Only if the system structure IS the design decision.
+Use mermaid diagrams to show relationships, not implementation details.
 
 ## Alternative Concerns
 **This section is mandatory.** Its purpose is to prevent repeated discussions.
@@ -112,11 +144,9 @@ Format:
 **Why C**: [Clear reasoning for the choice]
 **Revisit if**: [Conditions that would change this decision]
 
-## Implementation Plan
-Phases/steps with scope per PR.
-
-## Open Questions
-Unresolved decisions that need team input.
+## Concerns
+Known risks, uncertainties, ambiguities, and unresolved questions about this design.
+For each concern: state what is unclear or risky, and how it will be addressed (mitigation, further investigation, or accepted as-is).
 
 ## Review Checklist
 - [ ] Architecture approved
@@ -132,55 +162,20 @@ Unresolved decisions that need team input.
 - Reviewers may suggest an approach you already evaluated — point to the doc instead of re-investigating
 - If conditions change later, "Revisit if" tells you when to reconsider
 
-## Code Snippets in Documents
+## Code Snippets — Use Sparingly
 
-### No Local File Links
+**Default: don't include code.** The Design Doc explains WHY, not HOW. Code changes; rationale doesn't.
 
-When referencing code, include the relevant snippet directly:
+### When Code IS Appropriate
 
-```markdown
-❌ Don't do this
-See the implementation in [auth.ts](src/auth.ts#L42-L55).
+Only include code when the code itself IS the design decision (e.g., a specific pattern, interface contract, or data structure that is central to the proposal).
 
-✅ Do this
-The auth middleware validates the JWT token:
-```
+### Rules for Included Code
 
-### Mark Code Intent Explicitly
-
-Every code block in a Design Doc must be labeled as either **conceptual** or **implementation-ready**.
-
-```markdown
-❌ Ambiguous (causes unnecessary debate about code details)
-```typescript
-function validateToken(token: string): Claims {
-  return jwt.verify(token, SECRET_KEY);
-}
-```
-
-✅ Clear intent
-> **Conceptual** — illustrates the approach, not the final implementation.
-```typescript
-function validateToken(token: string): Claims {
-  return jwt.verify(token, SECRET_KEY);
-}
-```
-
-✅ Or if it IS the intended implementation
-> **Implementation-ready** — implement as written.
-```typescript
-function validateToken(token: string): Claims {
-  return jwt.verify(token, SECRET_KEY);
-}
-```
-```
-
-**Why**: Without this label, reviewers will argue about variable names, error handling, and edge cases in code that was only meant to convey an idea. Labeling saves everyone's time.
-
-- **Conceptual**: "This shows the general approach. Details will be refined during implementation."
-- **Implementation-ready**: "This is the exact code to write. Review it for correctness."
-
-Keep snippets short (< 20 lines). If more context is needed, summarize the logic in prose.
+1. **Always mark as Conceptual**: All code in Design Docs is illustrative, not final.
+   > **Conceptual** — illustrates the approach, not the final implementation.
+2. **Keep under 10 lines**: If you need more, summarize in prose instead.
+3. **No local file links**: Notion can't resolve them. Describe inline or quote directly.
 
 ## Integration
 
