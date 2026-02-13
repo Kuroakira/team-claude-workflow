@@ -191,11 +191,11 @@ Only include code when the code itself IS the design decision (e.g., a specific 
 ## Size Guidance
 
 - **Large designs** (new system, architectural change): aim for thoroughness, not brevity. Cover all decisions and alternatives
-- **Small changes** (incremental improvement, single component): a mini design doc is fine — Overview, Proposal, Alternative Concerns may be enough
+- **Small changes** (incremental improvement, single component): a mini design doc is fine — Overview, Proposal, Alternatives Considered may be enough
 - The right length is determined by the number of decisions that need explaining, not by page count
 
 ## Integration
 
 - Used during the Design Phase (`/design` command)
 - Documents are reviewed by the team before implementation begins
-- Feeds into `/plan` for implementation planning
+- After approval, `/plan` creates the implementation plan as a separate artifact — the Design Doc itself contains NO implementation plan
