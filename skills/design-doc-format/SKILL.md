@@ -118,6 +118,7 @@ A reader unfamiliar with the project should understand the problem after reading
 Explain:
 - What the design is
 - Why this approach is the best fit given the constraints
+- Where this sits on the spectrum: ideal architecture vs. pragmatic middle ground vs. incremental extension of current code — and why that position is right for now
 - Key design decisions with reasoning and accepted trade-offs
 
 ### System-Context Diagram (optional)
