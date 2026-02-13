@@ -7,7 +7,7 @@ description: Use when starting a new session, resuming after compact/clear, or b
 
 AI as a mirror — articulate "why" at every step, accumulate knowledge across projects.
 
-## Mandatory Skill Invocation
+つまり## Mandatory Skill Invocation
 
 **Skills are NOT optional. They are mandatory workflows.**
 
@@ -80,6 +80,7 @@ When the user starts a conversation or gives a new task, detect the context and 
 | Signal | Suggest | Example |
 |--------|---------|---------|
 | New feature/project request, exploring options, "how should we...", "what's the best approach" | `/research` | "Let me investigate best practices first. Starting /research." |
+| **"Create a Design Doc" — but no research has been done yet** | `/research` first | "A good Design Doc needs alternatives comparison. Let me start with /research first." |
 | Research is done, user is committing to an approach, "let's design...", "I think we should..." | `/design` | "We have enough research. Ready to write a Design Doc? I'll start /design." |
 | Design Doc exists and is approved, "let's break this down", "what are the steps" | `/plan` | "Design is approved. Let me break it into tasks with /plan." |
 | Plan exists, "let's build", "start coding", implementation request | `/implement` | "Plan is ready. Starting implementation with /implement." |
